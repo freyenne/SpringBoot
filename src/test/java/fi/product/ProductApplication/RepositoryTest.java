@@ -1,7 +1,8 @@
 package fi.product.ProductApplication;
 
-import fi.product.ProductApplication.Repositories.*;
-import fi.product.ProductApplication.Model.Product;
+
+import fi.product.ProductApplication.domain.ProductRepository;
+import fi.product.ProductApplication.domain.Product;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
