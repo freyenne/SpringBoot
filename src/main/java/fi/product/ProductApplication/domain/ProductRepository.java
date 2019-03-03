@@ -1,9 +1,7 @@
-package fi.product.ProductApplication.Repositories;
+package fi.product.ProductApplication.domain;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
-
-import fi.product.ProductApplication.Model.Product;
 
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
