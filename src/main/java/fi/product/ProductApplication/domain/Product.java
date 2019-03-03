@@ -18,12 +18,12 @@ public class Product {
     private String productName;
     private String Supplier;
     private String Category;
-	public Product(Long id, String productName, String supplier, String category) {
+	public Product() {
 		super();
 		this.id = id;
 		this.productName = productName;
-		Supplier = supplier;
-		Category = category;
+		this.Supplier = Supplier;
+		this.Category = Category;
 	}
 	public Long getId() {
 		return id;

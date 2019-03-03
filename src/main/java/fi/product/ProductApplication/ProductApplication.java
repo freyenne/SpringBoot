@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.ui.Model;
 
 @SpringBootApplication
 public class ProductApplication {
@@ -20,7 +21,7 @@ public class ProductApplication {
         return args -> {
 
             System.out.println("Let's inspect the beans provided by Spring Boot:");
-
+            
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
             for (String beanName : beanNames) {

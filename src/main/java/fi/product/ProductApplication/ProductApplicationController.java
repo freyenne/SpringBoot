@@ -8,7 +8,7 @@ public class ProductApplicationController {
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "Tervetuloa";
     }
 
 }

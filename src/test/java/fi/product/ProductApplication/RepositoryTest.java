@@ -33,9 +33,7 @@ public class RepositoryTest {
     public void testPersistence() {
         //given
         Product product = new Product();
-        product.setDescription(PRODUCT_DESCRIPTION);
-        product.setImageUrl(IMAGE_URL);
-        product.setPrice(BIG_DECIMAL_100);
+        
 
         //when
         productRepository.save(product);
@@ -44,8 +42,6 @@ public class RepositoryTest {
         Assert.assertNotNull(product.getId());
         Product newProduct = productRepository.findById(product.getId()).orElse(null);
         Assert.assertEquals((Long) 1L, newProduct.getId());
-        Assert.assertEquals(PRODUCT_DESCRIPTION, newProduct.getDescription());
-        Assert.assertEquals(BIG_DECIMAL_100.compareTo(newProduct.getPrice()), 0);
-        Assert.assertEquals(IMAGE_URL, newProduct.getImageUrl());
+        
     }
 }
