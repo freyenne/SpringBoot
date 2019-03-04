@@ -1,4 +1,4 @@
-package com.example.harjoitustyo2019.web;
+package fi.product.ProductApplication.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -7,13 +7,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.example.harjoitustyo2019.domain.User;
-import com.example.harjoitustyo2019.domain.UserRepository;
+import fi.product.ProductApplication.domain.User;
+import fi.product.ProductApplication.domain.UserRepository;
 
 
-/**
- * This class is used by spring security to authenticate and authorize user
- **/
+
 @Service
 public class UserDetailServiceImplemention implements UserDetailsService  {
 	private final UserRepository repository;
