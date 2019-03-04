@@ -3,7 +3,7 @@ package fi.product.ProductApplication.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user_tbl")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,19 +15,16 @@ public class User {
     private String username;
 
     @Column(name = "password", nullable = false)
-    private String passwordHash;
-
-    @Column(name = "role", nullable = false)
-    private String role;
-    
+    private String password;
+   
     public User() {
     }
 
-	public User(String username, String passwordHash, String role) {
+	public User(String username, String password, String role) {
 		super();
 		this.username = username;
-		this.passwordHash = passwordHash;
-		this.role = role;
+		this.password = password;
+		
 	}
 
 	public Long getId() {
@@ -46,20 +43,14 @@ public class User {
 		this.username = username;
 	}
 
-	public String getPasswordHash() {
-		return passwordHash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswordHash(String passwordHash) {
-		this.passwordHash = passwordHash;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
+	
 
 }
